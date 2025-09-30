@@ -1,0 +1,13 @@
+@echo off
+echo Starting build process...
+
+echo Installing dependencies...
+call npm install
+
+echo Building the project...
+call npm run build
+
+echo Copying additional files...
+if exist "public\_redirects" copy "public\_redirects" "dist\" >nul 2>&1
+
+echo Build complete! Files ready for deployment in 'dist' directory.

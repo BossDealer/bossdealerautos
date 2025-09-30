@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boss Dealer - Your trusted car dealership offering new and used vehicles with exceptional service, competitive pricing, and expert financing solutions.">
+  <meta name="keywords" content="car dealer, auto sales, used cars, new cars, car financing, automotive, vehicle sales, car loans">
+  <meta name="author" content="Boss Dealer">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Boss Dealer - Premium Car Dealership">
+  <meta property="og:description" content="Find your perfect car at Boss Dealer. Quality vehicles, expert service, and competitive financing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bossdealer.autos">
+  <meta property="og:image" content="https://bossdealer.autos/images/og-image.jpg">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Boss Dealer - Premium Car Dealership">
+  <meta name="twitter:description" content="Find your perfect car at Boss Dealer. Quality vehicles, expert service, and competitive financing.">
+  <meta name="twitter:image" content="https://bossdealer.autos/images/twitter-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/public/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="/public/icons/apple-touch-icon.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bossdealer.autos">
+  
+  <title>Boss Dealer - Premium Car Dealership | New & Used Cars</title>
+  
+  <!-- Critical CSS to prevent FOUC -->
+  <style>
+    /* Critical styles to prevent flash of unstyled content */
+    html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .font-sans { font-family: Inter, system-ui, sans-serif; }
+    .font-heading { font-family: Poppins, system-ui, sans-serif; }
+    .fixed { position: fixed; }
+    .top-0 { top: 0; }
+    .left-0 { left: 0; }
+    .right-0 { right: 0; }
+    .z-50 { z-index: 50; }
+    .bg-primary-600 { background-color: #164a6b; }
+    .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+    .text-white { color: #ffffff; }
+    .hidden { display: none; }
+    .relative { position: relative; }
+    .min-h-screen { min-height: 100vh; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .text-center { text-align: center; }
+    .pt-24 { padding-top: 6rem; }
+    body { visibility: hidden; }
+    body.loaded { visibility: visible; }
+  </style>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "Boss Dealer",
+    "description": "Premium car dealership offering new and used vehicles with exceptional service",
+    "url": "https://bossdealer.autos",
+    "telephone": "+234-803-123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Orobator Street, Off Textile Mill",
+      "addressLocality": "Oredo",
+      "addressRegion": "Edo State",
+      "postalCode": "300283",
+      "addressCountry": "NG"
+    },
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "priceRange": "₦₦-₦₦₦",
+    "areaServed": "Benin City Metro Area"
+  }
+  </script>
+</head>
+<body class="font-sans">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-primary-600 shadow-lg">
+    <div class="container-max">
+      <div class="flex items-center justify-between py-4 px-6">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+            <span class="text-primary-600 font-bold text-xl">B</span>
+          </div>
+          <span class="text-2xl font-heading font-bold text-white">Boss Dealer</span>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#hero" class="nav-link text-white">Home</a>
+          <a href="#services" class="nav-link text-white">Services</a>
+          <a href="#about" class="nav-link text-white">About</a>
+          <a href="#testimonials" class="nav-link text-white">Reviews</a>
+          <a href="contact.html" class="nav-link text-white">Contact</a>
+          <button class="btn-accent open-quote-modal">Get Quote</button>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="md:hidden text-white" aria-expanded="false">
+          <svg class="hamburger-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="close-icon w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg" aria-hidden="true">
+        <div class="px-6 py-4 space-y-4">
+          <a href="#hero" class="nav-link block">Home</a>
+          <a href="#services" class="nav-link block">Services</a>
+          <a href="#about" class="nav-link block">About</a>
+          <a href="#testimonials" class="nav-link block">Reviews</a>
+          <a href="contact.html" class="nav-link block">Contact</a>
+          <button class="btn-accent open-quote-modal w-full">Get Quote</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-700 to-secondary-600"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-10 w-20 h-20 border border-white rounded-full"></div>
+      <div class="absolute bottom-32 right-16 w-32 h-32 border border-white rounded-full"></div>
+      <div class="absolute top-1/2 left-1/4 w-16 h-16 border border-white transform rotate-45"></div>
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
+      <h1 class="responsive-text-2xl font-heading font-bold mb-6 animate-fade-in-up">
+        Find Your <span class="text-accent-500">Perfect Car</span><br>
+        at Boss Dealer
+      </h1>
+      <p class="responsive-text-lg mb-8 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s">
+        Discover premium vehicles with unbeatable prices, expert financing, and exceptional customer service. Your dream car awaits!
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.4s">
+        <button class="btn-accent open-quote-modal text-lg px-8 py-4">Get Instant Quote</button>
+        <a href="#services" class="btn-outline text-lg px-8 py-4 text-white border-white hover:bg-white hover:text-primary-500">
+          Learn More
+        </a>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-subtle">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="text-center mb-16 fade-in-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4">
+          Why Choose <span class="gradient-text">Boss Dealer</span>?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We provide exceptional automotive services with a commitment to quality, transparency, and customer satisfaction.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="card fade-in-on-scroll hover:transform hover:scale-105">
+          <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Quality Guaranteed</h3>
+          <p class="text-gray-600 mb-4">Every vehicle undergoes rigorous inspection and comes with our comprehensive warranty program.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Multi-point inspection</li>
+            <li>• Certified mechanics</li>
+            <li>• Extended warranty options</li>
+          </ul>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="card fade-in-on-scroll hover:transform hover:scale-105" style="animation-delay: 0.1s">
+          <div class="w-16 h-16 bg-secondary-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-secondary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Best Financing</h3>
+          <p class="text-gray-600 mb-4">Competitive rates and flexible terms to fit your budget and financial situation.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Pre-approved financing</li>
+            <li>• Competitive rates</li>
+            <li>• Flexible payment plans</li>
+          </ul>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="card fade-in-on-scroll hover:transform hover:scale-105" style="animation-delay: 0.2s">
+          <div class="w-16 h-16 bg-accent-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Fast Service</h3>
+          <p class="text-gray-600 mb-4">Quick approval process and same-day delivery for qualified buyers.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Instant pre-qualification</li>
+            <li>• Same-day approval</li>
+            <li>• Express delivery</li>
+          </ul>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="card fade-in-on-scroll hover:transform hover:scale-105" style="animation-delay: 0.3s">
+          <div class="w-16 h-16 bg-success-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-success-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>
+          <p class="text-gray-600 mb-4">Experienced professionals dedicated to finding your perfect vehicle match.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Certified sales experts</li>
+            <li>• Personal consultations</li>
+            <li>• After-sales support</li>
+          </ul>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="card fade-in-on-scroll hover:transform hover:scale-105" style="animation-delay: 0.4s">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Market Analysis</h3>
+          <p class="text-gray-600 mb-4">Data-driven pricing and market insights to ensure you get the best deal.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Competitive pricing</li>
+            <li>• Market value analysis</li>
+            <li>• Price transparency</li>
+          </ul>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="card fade-in-on-scroll hover:transform hover:scale-105" style="animation-delay: 0.5s">
+          <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Trust & Security</h3>
+          <p class="text-gray-600 mb-4">Licensed dealership with full transparency and customer protection guarantees.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Licensed & bonded</li>
+            <li>• Secure transactions</li>
+            <li>• Customer protection</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section-padding gradient-bg text-white">
+    <div class="container-max">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="fade-in-on-scroll">
+          <div class="counter text-4xl md:text-5xl font-bold mb-2" data-target="40+">0</div>
+          <p class="text-lg opacity-90">Happy Customers</p>
+        </div>
+        <div class="fade-in-on-scroll" style="animation-delay: 0.1s">
+          <div class="counter text-4xl md:text-5xl font-bold mb-2" data-target="25+">0</div>
+          <p class="text-lg opacity-90">Cars Sold</p>
+        </div>
+        <div class="fade-in-on-scroll" style="animation-delay: 0.2s">
+          <div class="counter text-4xl md:text-5xl font-bold mb-2" data-target="2">0</div>
+          <p class="text-lg opacity-90">Years Experience</p>
+        </div>
+        <div class="fade-in-on-scroll" style="animation-delay: 0.3s">
+          <div class="counter text-4xl md:text-5xl font-bold mb-2" data-target="98+">0</div>
+          <p class="text-lg opacity-90">% Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview Section -->
+  <section id="about" class="section-padding">
+    <div class="container-max">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-in-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6">
+            About <span class="gradient-text">Boss Dealer</span>
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Founded in 2022, Boss Dealer has quickly become the trusted choice for car buyers across Edo State. We pride ourselves on transparency, quality, and exceptional customer service.
+          </p>
+          <p class="text-gray-600 mb-8">
+            Our team of automotive experts is dedicated to helping you find the perfect vehicle that fits your needs and budget. From luxury sedans to reliable family cars, we have something for everyone.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="about.html" class="btn-primary">Learn More About Us</a>
+            <button class="btn-outline open-quote-modal">Get Quote Now</button>
+          </div>
+        </div>
+        
+        <div class="fade-in-on-scroll grid grid-cols-2 gap-4" style="animation-delay: 0.2s">
+          <div class="space-y-4">
+            <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+              <span class="text-gray-500">Showroom Image</span>
+            </div>
+            <div class="bg-gray-200 h-32 rounded-lg flex items-center justify-center">
+              <span class="text-gray-500">Team Photo</span>
+            </div>
+          </div>
+          <div class="space-y-4 pt-8">
+            <div class="bg-gray-200 h-32 rounded-lg flex items-center justify-center">
+              <span class="text-gray-500">Awards</span>
+            </div>
+            <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+              <span class="text-gray-500">Facility</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section-padding bg-gray-50">
+    <div class="container-max">
+      <div class="text-center mb-16 fade-in-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4">
+          What Our <span class="gradient-text">Customers Say</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
+        </p>
+      </div>
+      
+      <div class="testimonial-slider relative">
+        <div class="testimonial-slide active fade-in-on-scroll">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-8">
+              <div class="flex justify-center mb-4">
+                <div class="flex text-accent-500">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+              <blockquote class="text-2xl md:text-3xl text-gray-700 font-medium italic mb-8">
+                "Exceptional service from start to finish! The team at Boss Dealer made buying my first car stress-free and enjoyable. Highly recommended!"
+              </blockquote>
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 bg-gray-300 rounded-full mr-4 flex items-center justify-center">
+                  <span class="text-gray-600 font-semibold">SM</span>
+                </div>
+                <div class="text-left">
+                  <div class="font-semibold text-gray-900">Sarah Mitchell</div>
+                  <div class="text-gray-600">Benin City, Edo State</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding gradient-bg text-white text-center">
+    <div class="container-max fade-in-on-scroll">
+      <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+        Ready to Find Your Perfect Car?
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+        Join thousands of satisfied customers who found their dream car at Boss Dealer. Get started with your personalized quote today!
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button class="btn-accent text-lg px-8 py-4 open-quote-modal">Get Your Quote Now</button>
+        <a href="contact.html" class="btn-outline text-lg px-8 py-4 text-white border-white hover:bg-white hover:text-primary-500">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white section-padding">
+    <div class="container-max">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- Company Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-xl">B</span>
+            </div>
+            <span class="text-2xl font-heading font-bold">Boss Dealer</span>
+          </div>
+          <p class="text-gray-300 mb-4 max-w-md">
+            Your trusted automotive partner since 2022. We provide quality vehicles, expert service, and unbeatable customer satisfaction in Benin City.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">Facebook</a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">Twitter</a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">LinkedIn</a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#hero" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#testimonials" class="text-gray-300 hover:text-white transition-colors">Reviews</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+            <li><a href="/sitemap.xml" class="text-gray-300 hover:text-white transition-colors">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+          <div class="space-y-2 text-gray-300">
+            <p>(+234) 810-109-8873</p>
+            <p>info@bossdealer.autos</p>
+            <p>Orobator stret<br>Off Textile Mill, Oredo, Benin City 300283, Edo State
+</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 pt-8 text-center text-gray-300">
+        <p>&copy; 2025 Boss Dealer. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a> | <a href="https://digimaj.namehive.fun" target="_blank" rel="dofollow" class="designer-credit">Designed by DIGIMAJ</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Widget -->
+  <a href="https://wa.me/2348101098873?text=Hello%2C%20I%27m%20interested%20in%20your%20vehicles.%20Can%20you%20help%20me%3F" class="whatsapp-widget no-print" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+    </svg>
+  </a>
+
+  <!-- Load TypeScript Module -->
+  <script type="module" src="/src/ts/main.ts"></script>
+  
+  <!-- Prevent FOUC by showing content after styles load -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+</html>

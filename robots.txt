@@ -1,0 +1,46 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bossdealer.autos/sitemap.xml
+
+# Allow indexing of main pages
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+
+# Disallow admin or private directories (when they exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /src/
+
+# Allow CSS and JS files for better rendering
+Allow: /src/styles/
+Allow: /*.css
+Allow: /*.js
+
+# Crawl delay (optional - be respectful to search engines)
+Crawl-delay: 1
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block malicious bots
+User-agent: BadBot
+Disallow: /
+
+User-agent: SpamBot
+Disallow: /
