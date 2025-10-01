@@ -6,7 +6,7 @@ import { ContactForm } from './components/ContactForm.js';
 class BossDealer {
   private quoteModal!: QuoteModal;
   private navigation!: Navigation;
-  private contactForm!: ContactForm;
+  private contactForm?: ContactForm;
 
   constructor() {
     this.init();
@@ -27,7 +27,8 @@ class BossDealer {
     this.navigation = new Navigation();
     
     // Only initialize contact form if on contact page
-    if (document.getElementById('contact-form')) {
+    const contactFormElement = document.getElementById('contact-form');
+    if (contactFormElement) {
       this.contactForm = new ContactForm();
     }
 
@@ -169,6 +170,10 @@ class BossDealer {
   // Public methods for external access
   public openQuoteModal(): void {
     this.quoteModal.open();
+  }
+
+  public getContactForm(): ContactForm | undefined {
+    return this.contactForm;
   }
 
   public getCurrentSection(): string {
