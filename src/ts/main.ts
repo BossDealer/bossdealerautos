@@ -6,7 +6,7 @@ import { ContactForm } from './components/ContactForm.js';
 class BossDealer {
   private quoteModal!: QuoteModal;
   private navigation!: Navigation;
-  private contactForm!: ContactForm;
+  private contactForm: ContactForm | null = null;
 
   constructor() {
     this.init();
@@ -177,6 +177,10 @@ class BossDealer {
 
   public navigateToSection(sectionId: string): void {
     this.navigation.navigateTo(sectionId);
+  }
+
+  public getContactForm(): ContactForm | null {
+    return this.contactForm;
   }
 }
 

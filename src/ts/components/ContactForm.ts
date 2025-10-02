@@ -189,7 +189,7 @@ export class ContactForm {
     const mapElement = document.getElementById('google-map');
     if (!mapElement || !window.google) return;
 
-    const center = { lat: 40.7128, lng: -74.0060 }; // NYC coordinates
+    const center = { lat: 6.3350, lng: 5.6269 }; // Benin City, Nigeria coordinates
     this.map = new google.maps.Map(mapElement, {
       zoom: 15,
       center: center,
