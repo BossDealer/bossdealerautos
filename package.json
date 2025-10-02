@@ -21,6 +21,5 @@
     "vite": "^5.0.8"
   },
   "dependencies": {
-    "@types/google.maps": "^3.54.10"
   }
 }

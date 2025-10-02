@@ -70,19 +70,6 @@ export interface ApiResponse<T> {
   errors?: Record<string, string>;
 }
 
-// Google Maps Types
-export interface MapConfig {
-  center: google.maps.LatLngLiteral;
-  zoom: number;
-  mapTypeId: google.maps.MapTypeId;
-}
-
-export interface MarkerConfig {
-  position: google.maps.LatLngLiteral;
-  title: string;
-  info: string;
-}
-
 // Animation Types
 export interface AnimationConfig {
   duration: number;
