@@ -3,9 +3,17 @@
   "name": "boss-dealer",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm install",
+  "installCommand": "npm ci --timeout=300000 --fetch-timeout=300000 --fetch-retries=5",
   "devCommand": "npm run dev",
   "framework": "vite",
+  "env": {
+    "NPM_CONFIG_TIMEOUT": "300000",
+    "NPM_CONFIG_FETCH_TIMEOUT": "300000",
+    "NPM_CONFIG_FETCH_RETRIES": "5",
+    "NPM_CONFIG_PROGRESS": "false",
+    "NPM_CONFIG_AUDIT": "false",
+    "NPM_CONFIG_FUND": "false"
+  },
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
