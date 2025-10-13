@@ -3,7 +3,6 @@ import { ContactFormData, ValidationResult } from '../types/index.js';
 export class ContactForm {
   private form: HTMLFormElement | null = null;
   private isSubmitting: boolean = false;
-  private map: google.maps.Map | null = null;
 
   constructor() {
     this.init();
@@ -14,7 +13,7 @@ export class ContactForm {
     if (this.form) {
       this.attachEventListeners();
     }
-    this.initializeMap();
+    // Map is now embedded via iframe - no initialization needed
   }
 
   private attachEventListeners(): void {
@@ -185,21 +184,4 @@ export class ContactForm {
     errors?.forEach(el => { el.textContent = ''; el.classList.add('hidden'); });
   }
 
-  private initializeMap(): void {
-    const mapElement = document.getElementById('google-map');
-    if (!mapElement || !window.google) return;
-
-    const center = { lat: 40.7128, lng: -74.0060 }; // NYC coordinates
-    this.map = new google.maps.Map(mapElement, {
-      zoom: 15,
-      center: center,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
-
-    new google.maps.Marker({
-      position: center,
-      map: this.map,
-      title: 'Boss Dealer'
-    });
-  }
 }

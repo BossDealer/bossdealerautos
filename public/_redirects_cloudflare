@@ -1,0 +1,6 @@
+# Redirects for clean URLs
+/about /about.html 200
+/contact /contact.html 200
+
+# Fallback for SPA behavior (if needed)
+/* /index.html 404
